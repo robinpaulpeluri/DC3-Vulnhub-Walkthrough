@@ -42,5 +42,31 @@ Nothing found here so i went to README.txt page in the website
 
 ![Screenshot from 2023-01-21 18-24-02](https://user-images.githubusercontent.com/108471951/213867810-e75de70c-d523-40e2-b990-a1bf55c0f43c.png)
 
+We can see its a Joomla Site so I used joomscan
 
+joomscan -u http://192.168.0.106/
+  
+![Screenshot from 2023-01-21 18-29-02](https://user-images.githubusercontent.com/108471951/213867919-f0ab7340-4334-423a-9a9c-dadabe76f01a.png)
+
+![Screenshot from 2023-01-20 16-02-10](https://user-images.githubusercontent.com/108471951/213867966-7967db14-7ab7-4e02-8dfb-3b5c24414afd.png)
+
+I Nothing found here so I searched for exploit for joomla 3.7.0 exploit in searchsploit
+
+searchsploit joomla 3.7.0
+
+
+![Screenshot from 2023-01-20 17-37-21](https://user-images.githubusercontent.com/108471951/213868030-e86aae21-c9a0-4e7e-b212-b71f0d2fb760.png)
+
+I found a exploit with exact verison 3.7.0 then i copied the exploit to my path using command 
+
+searchsploit -m php/webapps/42033.txt
+
+
+![Screenshot from 2023-01-20 17-48-31](https://user-images.githubusercontent.com/108471951/213868147-7a2aa1d5-ab05-4eef-9b96-ccdcea692a76.png)
+
+cat 42033.txt
+
+![Screenshot from 2023-01-20 17-50-09](https://user-images.githubusercontent.com/108471951/213868167-ad422f11-2164-449d-82e3-cdc99bf5b56b.png)
+
+here we can check the usage 
 

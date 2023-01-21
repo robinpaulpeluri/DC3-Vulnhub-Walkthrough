@@ -20,3 +20,27 @@ If that's the case, and if you want it to be a bit more of a challenge, you can 
   
 Sudo netdiscover
   
+  ![Screenshot from 2023-01-17 01-14-16](https://user-images.githubusercontent.com/108471951/213867465-39a9e0fd-e30b-4742-8c6c-4a6cefbe7492.png)
+
+Firstly we have to identify the machine IP address using tool like NetDiscover
+
+### Nmap
+
+nmap -sC -sV -p- 192.168.0.106
+
+
+![Screenshot from 2023-01-21 18-20-04](https://user-images.githubusercontent.com/108471951/213867561-351b64f7-3804-4da4-90db-c07a1efe64f6.png)
+
+
+only port 80 open. let’s see what we can find on the website.
+
+![Screenshot from 2023-01-17 01-20-01](https://user-images.githubusercontent.com/108471951/213867622-9bbd872b-781f-4acf-a521-445e13580711.png)
+
+Nothing found here so i went to README.txt page in the website
+
+192.168.0.106/README.txt
+
+![Screenshot from 2023-01-21 18-24-02](https://user-images.githubusercontent.com/108471951/213867810-e75de70c-d523-40e2-b990-a1bf55c0f43c.png)
+
+
+

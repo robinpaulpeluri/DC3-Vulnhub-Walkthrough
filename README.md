@@ -242,6 +242,79 @@ cd tmp
 
 
 
+![Screenshot from 2023-01-20 21-55-56](https://user-images.githubusercontent.com/108471951/214664817-770a5b07-4385-4eaf-9fee-18441b315822.png)
+
+
+
+ls 
+
+
+unzip 39772.zip
+
+
+![Screenshot from 2023-01-20 21-56-07](https://user-images.githubusercontent.com/108471951/214664946-9268d21d-d8c5-44f0-9862-0a7b87835fb8.png)
+
+ls 
+
+![Screenshot from 2023-01-20 21-56-45](https://user-images.githubusercontent.com/108471951/214665055-7b9434eb-a5e5-4757-91f6-c8aa90d4de15.png)
+
+cd 39772
+ls
+![Screenshot from 2023-01-20 22-05-00](https://user-images.githubusercontent.com/108471951/214665204-7da967ee-0dcc-4708-afcf-06539f7ec183.png)
+
+
+### as per the usage in the exploit 
+
+
+tar -xvf exploit.tar
+
+![Screenshot from 2023-01-20 22-08-13](https://user-images.githubusercontent.com/108471951/214665284-05207223-4954-4a9f-b318-9241d5d92d7d.png)
+
+
+/ebpf_mapfd_doubleput$ ./compile.sh
+/ebpf_mapfd_doubleput$  ./doubleput
+
+![Screenshot from 2023-01-20 22-16-11](https://user-images.githubusercontent.com/108471951/214665848-e81a6f89-b9e4-4a73-b6c8-6cf1e1e758e8.png)
+
+cd /ebpf_mapfd_doubleput_exploit
+
+ls 
+
+![Screenshot from 2023-01-20 22-21-37](https://user-images.githubusercontent.com/108471951/214666052-9b398b7d-b4f1-4daa-b427-33d8408ce0de.png)
+
+
+./compile.sh
+
+![Screenshot from 2023-01-20 22-22-56](https://user-images.githubusercontent.com/108471951/214666115-df49d175-c673-41ba-8dc7-d841088d034d.png)
+
+ls
+
+![Screenshot from 2023-01-20 22-23-36](https://user-images.githubusercontent.com/108471951/214666205-fea6b5b1-6b24-4b09-ae6c-2018f5fe56fd.png)
+
+./doubleput
+
+
+![Screenshot from 2023-01-20 22-25-18](https://user-images.githubusercontent.com/108471951/214666290-81897885-f9ab-47a8-953a-222e65ddcb2b.png)
+
+now i got root previlage
+
+cd /
+ls
+
+![Screenshot from 2023-01-20 22-59-43](https://user-images.githubusercontent.com/108471951/214666533-17c1e7ca-d563-441a-bfdc-024606e92837.png)
+
+cd root
+
+ls
+
+![Screenshot from 2023-01-20 23-00-10](https://user-images.githubusercontent.com/108471951/214666619-f14e8808-4309-443f-a5ef-2ed6d9b47c85.png)
+
+
+I sucsesfully found the flag
+
+
+@robinpaul #robinpaul
+
 
 
 

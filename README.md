@@ -68,5 +68,13 @@ cat 42033.txt
 
 ![Screenshot from 2023-01-20 17-50-09](https://user-images.githubusercontent.com/108471951/213868167-ad422f11-2164-449d-82e3-cdc99bf5b56b.png)
 
+
 here we can check the usage 
+
+so as per the usage I have pasted the link which is in usage, after url
+
+![Screenshot from 2023-01-20 17-51-20](https://user-images.githubusercontent.com/108471951/214651912-a329a7ab-bacf-42af-aec7-501a8e9bba0d.png)
+
+By that I confirmed this site is vulnerable to SQL SYNTAX
+
 
